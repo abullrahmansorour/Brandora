@@ -1,0 +1,24 @@
+:root {
+  color-scheme: dark;
+  --canvas: #0a0a0c;
+  --surface: #141418;
+  --surface-raised: #1b1b20;
+  --ink: #f8f8fa;
+  --muted: #adb1be;
+  --accent: #c6f24e;
+  --accent-ink: #151a0a;
+  --line: rgb(255 255 255 / 0.11);
+  --line-strong: #70727a;
+  --danger: #ff9d9d;
+
+  --font-display: "Space Grotesk", Arial, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Consolas, monospace;
+
+  --gutter: clamp(1.125rem, 4.5vw, 4rem);
+  --container: 82rem;
+  --section-space: clamp(4.5rem, 9vw, 8.5rem);
+  --header-height: 4.625rem;
+  --radius: 1.25rem;
+  --ease: cubic-bezier(.2, .75, .22, 1);
+}

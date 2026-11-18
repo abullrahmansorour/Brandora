@@ -1,17 +1,18 @@
 # Brandora
 
-Brandora is a modern marketing agency website that emphasizes measurable business growth through data-driven storytelling, premium visuals, and engaging user interactions. It combines clean design, smooth animations, and interactive metrics to create a professional experience that reflects a results-focused digital agency.
+Brandora is a marketing agency site built with semantic HTML, modular CSS, and vanilla JavaScript. A dependency-free Node build generates static pages for the homepage, blog, and case studies. Vercel runs the contact endpoint.
 
-## Tech Stack
-- Next.js 16 (App Router & TypeScript)
-- Tailwind CSS v4
-- Framer Motion
-- Lucide React
-- next/font (Space Grotesk, Inter, JetBrains Mono)
-- Built with Claude Code
+## Local development
 
-## Goal
-The goal of this project was to design and develop a high-end agency landing page that demonstrates how modern frontend technologies can be used to communicate trust, showcase business performance, and deliver an engaging user experience. It focuses on combining motion, typography, and data-inspired visual elements to create a website that feels both premium and conversion-oriented while serving as a production-ready example of a modern marketing website.
+Use Node.js 24.
 
-## Live Website
-https://brandoras.vercel.app/
+- `npm run dev` rebuilds the site and serves it at `http://127.0.0.1:3000`. Restart after changing source files.
+- `npm run build` generates the deployable site in `dist/`.
+
+Edit the agency content in `src/content/`, page templates in `src/templates/`, and browser assets in `src/assets/`.
+
+## Contact and hosting
+
+The form posts JSON to `POST /api/contact`. Set `CONTACT_FORWARD_URL` in Vercel to forward submissions to the existing webhook. For local testing, use a test webhook URL through the environment or an ignored `.env.local` file. When the variable is unset, the handler logs the lead on the server.
+
+`vercel.json` selects the Other framework preset and preserves the site's extensionless routes. The existing live site is available at [brandoras.vercel.app](https://brandoras.vercel.app/).
